@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "../../dist/ancoradual-form-field",
+  "dest": "../../dist/ancoradual-components",
   "lib": {
     "entryFile": "src/public-api.ts"
   }
