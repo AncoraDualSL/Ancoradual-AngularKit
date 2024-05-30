@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'lib-forms',
+  selector: 'lib-ancoradual',
   standalone: true,
   imports: [],
   template: `
     <p>
-      forms works!
+      ancoradual works!
     </p>
   `,
   styles: ``
 })
-export class FormsComponent {
+export class AncoradualComponent {
 
 }

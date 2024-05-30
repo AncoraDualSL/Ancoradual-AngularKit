@@ -6,6 +6,9 @@
     "strict": true,
     "noImplicitOverride": true,
     "paths": {
+      "ancoradual": [
+        "./dist/ancoradual"
+      ],
       "forms": [
         "./dist/forms"
       ]

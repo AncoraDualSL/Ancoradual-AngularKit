@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { FormsService } from './forms.service';
+import { AncoradualService } from './ancoradual.service';
 
-describe('FormsService', () => {
-  let service: FormsService;
+describe('AncoradualService', () => {
+  let service: AncoradualService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(FormsService);
+    service = TestBed.inject(AncoradualService);
   });
 
   it('should be created', () => {
