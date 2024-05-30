@@ -3,23 +3,23 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ancoradual": {
+    "ancoradual-form-field": {
       "projectType": "library",
-      "root": "projects/ancoradual",
-      "sourceRoot": "projects/ancoradual/src",
+      "root": "projects/ancoradual-form-field",
+      "sourceRoot": "projects/ancoradual-form-field/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/ancoradual/ng-package.json"
+            "project": "projects/ancoradual-form-field/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/ancoradual/tsconfig.lib.prod.json"
+              "tsConfig": "projects/ancoradual-form-field/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/ancoradual/tsconfig.lib.json"
+              "tsConfig": "projects/ancoradual-form-field/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -27,7 +27,7 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "tsConfig": "projects/ancoradual/tsconfig.spec.json",
+            "tsConfig": "projects/ancoradual-form-field/tsconfig.spec.json",
             "polyfills": [
               "zone.js",
               "zone.js/testing"

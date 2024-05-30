@@ -6,12 +6,9 @@
     "strict": true,
     "noImplicitOverride": true,
     "paths": {
-      "ancoradual": [
-        "./dist/ancoradual"
+      "ancoradual-form-field": [
+        "./dist/ancoradual-form-field"
       ],
-      "forms": [
-        "./dist/forms"
-      ]
     },
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
