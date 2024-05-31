@@ -31,7 +31,6 @@ import { FieldService } from "../../field/service/field.service";
 				style({
 					transform: "translateY(0)", // Ajusta este valor según la altura inicial del label
 					fontSize: "16px",
-					color: "#ffffff",
 				}),
 			),
 			transition("up <=> down", [animate("200ms ease-out")]),
