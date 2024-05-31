@@ -1,5 +1,6 @@
-import { signal } from "@angular/core";
+import { Injectable, signal } from "@angular/core";
 
+@Injectable()
 export class FieldService {
 	isFocused = signal(false);
 	isFocusedContent = signal(false);

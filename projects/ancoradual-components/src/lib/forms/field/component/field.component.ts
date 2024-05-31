@@ -7,19 +7,19 @@ import {
 	OnInit,
 } from "@angular/core";
 
-import { FormLabelComponent } from "../label/label.component";
-import { FieldService } from "./field.service";
+import { LabelComponent } from "../../label/component/label.component";
+import { FieldService } from "../service/field.service";
 
 @Component({
-	selector: "app-form-field",
+	selector: "ancoradual-field",
 	standalone: true,
 	templateUrl: "./field.component.html",
 	styleUrls: ["./field.component.scss"],
-	imports: [FormLabelComponent],
+	imports: [LabelComponent],
 	providers: [FieldService],
 })
-export class FormFieldComponent implements AfterContentInit, OnInit {
-	@ContentChild(FormLabelComponent) label: FormLabelComponent | undefined;
+export class FieldComponent implements AfterContentInit, OnInit {
+	@ContentChild(LabelComponent) label: LabelComponent | undefined;
 	@ContentChild("input", { static: false }) input: ElementRef | undefined;
 
 	required: boolean = false;

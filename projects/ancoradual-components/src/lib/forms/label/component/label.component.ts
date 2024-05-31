@@ -8,10 +8,10 @@ import {
 import { CommonModule } from "@angular/common";
 import { Component, effect, Input } from "@angular/core";
 
-import { FieldService } from "../field/field.service";
+import { FieldService } from "../../field/service/field.service";
 
 @Component({
-	selector: "app-form-label",
+	selector: "ancoradual-label",
 	standalone: true,
 	imports: [CommonModule],
 	templateUrl: "./label.component.html",
@@ -38,7 +38,7 @@ import { FieldService } from "../field/field.service";
 		]),
 	],
 })
-export class FormLabelComponent {
+export class LabelComponent {
 	@Input() for: string = "label";
 	@Input() srOnly: boolean = false;
 	@Input() required: boolean = false;
