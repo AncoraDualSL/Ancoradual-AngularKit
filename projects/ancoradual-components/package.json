@@ -1,6 +1,7 @@
 {
   "name": "ancoradual-components",
-  "version": "0.0.1",
+  "description": "Ancoradual Angular Components",
+  "version": "0.0.2",
   "peerDependencies": {
     "@angular/common": "^18.0.0",
     "@angular/core": "^18.0.0"
@@ -8,5 +9,15 @@
   "dependencies": {
     "tslib": "^2.3.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AncoraDualSL/Ancoradual-AngularKit.git"
+  },
+  "author": "Roger Puga Ruiz <roger@ancoradual.com>",
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "components"
+  ],
   "sideEffects": false
 }
