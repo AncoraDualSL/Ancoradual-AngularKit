@@ -3,23 +3,23 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ancoradual-components": {
+    "adual-angular-kit": {
       "projectType": "library",
-      "root": "projects/ancoradual-components",
-      "sourceRoot": "projects/ancoradual-components/src",
+      "root": "projects/adual-angular-kit",
+      "sourceRoot": "projects/adual-angular-kit/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/ancoradual-components/ng-package.json"
+            "project": "projects/adual-angular-kit/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/ancoradual-components/tsconfig.lib.prod.json"
+              "tsConfig": "projects/adual-angular-kit/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/ancoradual-components/tsconfig.lib.json"
+              "tsConfig": "projects/adual-angular-kit/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -27,7 +27,7 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "tsConfig": "projects/ancoradual-components/tsconfig.spec.json",
+            "tsConfig": "projects/adual-angular-kit/tsconfig.spec.json",
             "polyfills": [
               "zone.js",
               "zone.js/testing"
