@@ -8,10 +8,10 @@ import {
 import { CommonModule } from "@angular/common";
 import { Component, effect, Input } from "@angular/core";
 
-import { FieldService } from "../../field/service/field.service";
+import { FieldService } from "../services/field.service";
 
 @Component({
-	selector: "ancoradual-label",
+	selector: "adual-label",
 	standalone: true,
 	imports: [CommonModule],
 	templateUrl: "./label.component.html",

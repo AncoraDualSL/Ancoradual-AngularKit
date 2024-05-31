@@ -7,11 +7,11 @@ import {
 	OnInit,
 } from "@angular/core";
 
-import { LabelComponent } from "../../label/component/label.component";
-import { FieldService } from "../service/field.service";
+import { LabelComponent } from "../components/label.component";
+import { FieldService } from "../services/field.service";
 
 @Component({
-	selector: "ancoradual-field",
+	selector: "adual-field",
 	standalone: true,
 	templateUrl: "./field.component.html",
 	styleUrls: ["./field.component.scss"],

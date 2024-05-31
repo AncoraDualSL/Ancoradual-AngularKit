@@ -6,8 +6,8 @@
     "strict": true,
     "noImplicitOverride": true,
     "paths": {
-      "ancoradual-components": [
-        "./dist/ancoradual-components"
+      "adual-components": [
+        "./dist/adual-components"
       ],
     },
     "noPropertyAccessFromIndexSignature": true,

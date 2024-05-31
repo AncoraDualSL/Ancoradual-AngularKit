@@ -8,7 +8,7 @@ import {
 	Renderer2,
 } from "@angular/core";
 
-import { FieldService } from "../service/field.service";
+import { FieldService } from "../../services/field.service";
 
 @Directive({
 	selector: "[reactiveField]",
@@ -26,14 +26,14 @@ export class FieldDirective implements OnInit {
 			if (this.service.isFocused()) {
 				this.render.addClass(
 					this.el.nativeElement,
-					"form-field--focused",
+					"adual-field--focused",
 				);
 			}
 			// blur
 			if (!this.service.isFocused()) {
 				this.render.removeClass(
 					this.el.nativeElement,
-					"form-field--focused",
+					"adual-field--focused",
 				);
 			}
 
@@ -41,7 +41,7 @@ export class FieldDirective implements OnInit {
 			if (this.service.haveContent()) {
 				this.render.addClass(
 					this.el.nativeElement,
-					"form-field--content",
+					"adual-field--content",
 				);
 			}
 		});
@@ -49,12 +49,12 @@ export class FieldDirective implements OnInit {
 
 	@HostListener("mouseenter")
 	onMouseEnter(): void {
-		this.render.addClass(this.el.nativeElement, "form-field--hover");
+		this.render.addClass(this.el.nativeElement, "adual-field--hover");
 	}
 
 	@HostListener("mouseleave")
 	onMouseLeave(): void {
-		this.render.removeClass(this.el.nativeElement, "form-field--hover");
+		this.render.removeClass(this.el.nativeElement, "adual-field--hover");
 	}
 
 	ngOnInit(): void {
@@ -62,12 +62,12 @@ export class FieldDirective implements OnInit {
 	}
 
 	private setClass(): void {
-		const classList = ["form-field"];
+		const classList = ["adual-field"];
 		if (this.inputStyle === "outlined") {
-			classList.push("form-field--outlined");
+			classList.push("adual-field--outlined");
 		}
 		if (this.inputStyle === "fill") {
-			classList.push("form-field--filled");
+			classList.push("adual-field--filled");
 		}
 		classList.forEach((className) => {
 			this.render.addClass(this.el.nativeElement, className);

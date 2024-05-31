@@ -1,5 +1,5 @@
 {
-  "name": "ancoradual-angular",
+  "name": "adual-angular",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -9,11 +9,6 @@
     "test": "ng test",
     "prepare": "if [ \"$NODE_ENV\" != \"production\" ]; then husky install; fi",
     "commitlint": "commitlint --edit"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
   },
   "private": true,
   "dependencies": {

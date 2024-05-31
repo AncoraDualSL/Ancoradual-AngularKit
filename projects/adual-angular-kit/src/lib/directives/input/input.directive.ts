@@ -1,4 +1,5 @@
 import {
+  AfterContentInit,
 	Directive,
 	effect,
 	ElementRef,
@@ -8,13 +9,13 @@ import {
 	Renderer2,
 } from "@angular/core";
 
-import { FieldService } from "../../field/service/field.service";
+import { FieldService } from "../../services/field.service";
 
 @Directive({
 	selector: "[reactiveInput]",
 	standalone: true,
 })
-export class InputDirective {
+export class InputDirective implements AfterContentInit {
 	@Output() valueChange: EventEmitter<string> = new EventEmitter<string>();
 	constructor(
 		private readonly el: ElementRef,
@@ -26,14 +27,14 @@ export class InputDirective {
 			if (this.service.isFocused()) {
 				this.render.addClass(
 					this.el.nativeElement,
-					"form-field__input--focused",
+					"adual-field__input--focused",
 				);
 			}
 			// blur
 			if (!this.service.isFocused()) {
 				this.render.removeClass(
 					this.el.nativeElement,
-					"form-field__input--focused",
+					"adual-field__input--focused",
 				);
 			}
 
@@ -41,18 +42,21 @@ export class InputDirective {
 			if (this.service.haveContent()) {
 				this.render.addClass(
 					this.el.nativeElement,
-					"form-field__input--content",
+					"adual-field__input--content",
 				);
 			}
 
 			if (!this.service.haveContent()) {
 				this.render.removeClass(
 					this.el.nativeElement,
-					"form-field__input--content",
+					"adual-field__input--content",
 				);
 			}
 		});
 	}
+  ngAfterContentInit(): void {
+    this.el.nativeElement.classList.add("adual-field__input");
+  }
 
 	@HostListener("input", ["$event"])
 	onInput(event: Event): void {

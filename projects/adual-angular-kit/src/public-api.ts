@@ -1,14 +1,16 @@
 /*
- * Public API Surface of ancoradual-components
+ * Public API Surface of adual-components
  */
 
 // Components
-export * from './lib/forms/field/component/field.component';
-export * from './lib/forms/label/component/label.component';
+export * from './lib/components/label.component';
+
+// Layouts
+export * from './lib/layout/field.component';
 
 // Directives
-export * from './lib/forms/field/directive/field.directive';
-export * from './lib/forms/label/directive/input.directive';
+export * from './lib/directives/field/field.directive';
+export * from './lib/directives/input/input.directive';
 
 // Services
-export * from './lib/forms/field/service/field.service';
+export * from './lib/services/field.service';

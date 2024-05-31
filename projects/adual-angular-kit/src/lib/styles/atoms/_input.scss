@@ -1,0 +1,46 @@
+.adual-field {
+	display: flex;
+	color: var(--adual-field-text-color);
+	cursor: text;
+	&--focused {
+		border: 2px solid var(--adual-field-focused-border-color);
+	}
+
+	&--outlined {
+		border: 2px solid var(--adual-field-border-color);
+		border-radius: var(--adual-field-border-radius);
+		padding: 0.5rem;
+		background-color: transparent;
+	}
+
+	&--filled {
+		background-color: var(--adual-field-background-color);
+		border-radius: var(--adual-field-border-radius);
+		padding: 0.5rem;
+	}
+
+	&__label {
+		color: var(--adual-field-text-color);
+	}
+
+	&__input {
+		display: none;
+		outline: none;
+		background-color: transparent;
+		border: none;
+		width: 100%;
+		color: var(--adual-field-text-color);
+
+		&::placeholder {
+			color: var(--adual-field-placeholder-color);
+			opacity: 0.8;
+		}
+		&--focused {
+			display: block;
+		}
+
+		&--content {
+			display: block;
+		}
+	}
+}

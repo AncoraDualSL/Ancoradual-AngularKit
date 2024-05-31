@@ -8,4 +8,4 @@ You can install the library using either npm or pnpm:
 
 ### Using npm
 ```bash
-npm install adual-angular-kit
+npm install @adual/angular-kit
