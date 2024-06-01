@@ -49,10 +49,15 @@ export class FieldComponent implements AfterContentInit, OnInit {
 		}
 	}
 
-	ngOnInit(): void {}
+	ngOnInit(): void {
+
+  }
 
 	ngAfterContentInit(): void {
 		this.updateRequired();
+    if (!this.input) {
+      throw new Error("Este componente necesita un input para funcionar correctamente");
+    }
 	}
 
 	private updateRequired(): void {
@@ -60,10 +65,10 @@ export class FieldComponent implements AfterContentInit, OnInit {
 			const nativeElement = this.input.nativeElement as HTMLElement;
 			this.required = nativeElement.hasAttribute("required");
 			this.label.required = this.required;
-		} else if (!this.input) {
-			console.error("Input element not found");
-		} else if (!this.label) {
-			console.error("Label element not found");
+      nativeElement.classList.add("disabled");
 		}
+    if (!this.input) {
+      console.error("No se encontró el input en el componente FieldComponent")
+    }
 	}
 }

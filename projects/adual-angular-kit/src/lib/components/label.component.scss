@@ -2,12 +2,3 @@
 	display: flex;
 	align-items: center;
 }
-label {
-  position: absolute;
-  pointer-events: none;
-	background-color: var(--background-color);
-	opacity: 1 !important;
-	border-radius: none !important;
-	padding: 0 0.1rem;
-	user-select: none;
-}

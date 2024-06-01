@@ -1,0 +1,54 @@
+/* Mixins para temas */
+
+@mixin field-theme-colors($mode) {
+  @if $mode==light {
+    /* Adual Field */
+    --adual-field-text-color: #{$text-color};
+    --adual-field-focused-border-color: #{$primary-color};
+    --adual-field-border-color: #{$border-color};
+    --adual-field-border-radius: #{$border-radius};
+    --adual-field-background-color: #{$background-color};
+    --adual-field-placeholder-color: #{$border-color};
+    --adual-field-focused-background-color: #{$background-color};
+  }
+
+  @else if $mode==dark {
+    /* Adual Field */
+    --adual-field-text-color: #{$dark-text-color};
+    --adual-field-focused-border-color: #{$dark-primary-color};
+    --adual-field-border-color: #{$dark-border-color};
+    --adual-field-border-radius: #{$dark-border-radius};
+    --adual-field-background-color: #{$dark-background-color};
+    --adual-field-placeholder-color: #{$dark-border-color};
+    --adual-field-focused-background-color: #{$dark-background-color};
+  }
+}
+
+@mixin body-theme-colors($mode) {
+  @if $mode==light {
+    /*Global*/
+    --global-background-color: #{$background-color};
+  }
+
+  @else if $mode==dark {
+    /*Global*/
+    --global-background-color: #{$dark-background-color};
+  }
+}
+
+@mixin all-theme-colors($mode) {
+  @if $mode==light {
+    /* Adual Field */
+    @include field-theme-colors(light);
+
+    /*Global*/
+    @include body-theme-colors(light);
+  }
+
+  @else if $mode==dark {
+    /* Adual Field */
+    @include field-theme-colors(dark);
+    /*Global*/
+    @include body-theme-colors(dark);
+  }
+}

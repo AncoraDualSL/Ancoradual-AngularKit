@@ -27,14 +27,14 @@ export class InputDirective implements AfterContentInit {
 			if (this.service.isFocused()) {
 				this.render.addClass(
 					this.el.nativeElement,
-					"adual-field__input--focused",
+					"adual-input--focused",
 				);
 			}
 			// blur
 			if (!this.service.isFocused()) {
 				this.render.removeClass(
 					this.el.nativeElement,
-					"adual-field__input--focused",
+					"adual-input--focused",
 				);
 			}
 
@@ -42,20 +42,20 @@ export class InputDirective implements AfterContentInit {
 			if (this.service.haveContent()) {
 				this.render.addClass(
 					this.el.nativeElement,
-					"adual-field__input--content",
+					"adual-input--content",
 				);
 			}
 
 			if (!this.service.haveContent()) {
 				this.render.removeClass(
 					this.el.nativeElement,
-					"adual-field__input--content",
+					"adual-input--content",
 				);
 			}
 		});
 	}
   ngAfterContentInit(): void {
-    this.el.nativeElement.classList.add("adual-field__input");
+    this.el.nativeElement.classList.add("adual-input");
   }
 
 	@HostListener("input", ["$event"])

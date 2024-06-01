@@ -4,7 +4,10 @@
   "lib": {
     "entryFile": "src/public-api.ts",
     "styleIncludePaths": [
-      "src/lib/styles/global/styles.scss"
+      "src/lib/styles/global/"
     ]
-  }
+  },
+  "assets": [
+    "src/lib/styles/"
+  ]
 }

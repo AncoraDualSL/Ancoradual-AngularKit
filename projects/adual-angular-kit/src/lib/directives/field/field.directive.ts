@@ -1,4 +1,5 @@
 import {
+  AfterContentInit,
 	Directive,
 	effect,
 	ElementRef,
@@ -14,7 +15,7 @@ import { FieldService } from "../../services/field.service";
 	selector: "[reactiveField]",
 	standalone: true,
 })
-export class FieldDirective implements OnInit {
+export class FieldDirective implements OnInit, AfterContentInit {
 	@Input() inputStyle: "fill" | "outlined" = "outlined";
 	constructor(
 		private readonly el: ElementRef,
@@ -46,6 +47,13 @@ export class FieldDirective implements OnInit {
 			}
 		});
 	}
+  ngAfterContentInit(): void {
+    // add styles
+  }
+
+  ngOnInit(): void {
+    this.setClass();
+  }
 
 	@HostListener("mouseenter")
 	onMouseEnter(): void {
@@ -57,9 +65,7 @@ export class FieldDirective implements OnInit {
 		this.render.removeClass(this.el.nativeElement, "adual-field--hover");
 	}
 
-	ngOnInit(): void {
-		this.setClass();
-	}
+
 
 	private setClass(): void {
 		const classList = ["adual-field"];

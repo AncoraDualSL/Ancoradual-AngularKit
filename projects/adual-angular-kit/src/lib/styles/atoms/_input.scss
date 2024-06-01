@@ -1,46 +1,56 @@
 .adual-field {
-	display: flex;
-	color: var(--adual-field-text-color);
-	cursor: text;
-	&--focused {
-		border: 2px solid var(--adual-field-focused-border-color);
-	}
+  display: flex;
+  color: var(--adual-field-text-color);
+  cursor: text;
 
-	&--outlined {
-		border: 2px solid var(--adual-field-border-color);
-		border-radius: var(--adual-field-border-radius);
-		padding: 0.5rem;
-		background-color: transparent;
-	}
+  &--focused {
+    border: 2px solid var(--adual-field-focused-border-color) !important;
+  }
 
-	&--filled {
-		background-color: var(--adual-field-background-color);
-		border-radius: var(--adual-field-border-radius);
-		padding: 0.5rem;
-	}
+  &--outlined {
+    border: 2px solid var(--adual-field-border-color);
+    border-radius: var(--adual-field-border-radius);
+    padding: 0.5rem;
+    background-color: var(--adual-field-background-color);
+  }
 
-	&__label {
-		color: var(--adual-field-text-color);
-	}
+  &--filled {
+    background-color: var(--adual-field-background-color);
+    border-radius: var(--adual-field-border-radius);
+    padding: 0.5rem;
+  }
+}
 
-	&__input {
-		display: none;
-		outline: none;
-		background-color: transparent;
-		border: none;
-		width: 100%;
-		color: var(--adual-field-text-color);
+.adual-input {
+  outline: none;
+  background-color: transparent !important;
+  border: none;
+  width: 100%;
+  color: var(--adual-field-text-color);
+  &.disabled {
+    display: none;
+  }
+  &::placeholder {
+    color: var(--adual-field-placeholder-color);
+    opacity: 0.8;
+  }
 
-		&::placeholder {
-			color: var(--adual-field-placeholder-color);
-			opacity: 0.8;
-		}
-		&--focused {
-			display: block;
-		}
+  &--focused {
+    display: block !important;
+  }
 
-		&--content {
-			display: block;
-		}
-	}
+  &--content {
+    display: block !important;
+  }
+}
+
+.adual-label {
+  position: absolute;
+  pointer-events: none;
+  background-color: var(--adual-field-background-color);
+  opacity: 1 !important;
+  border-radius: none !important;
+  padding: 0 0.1rem;
+  user-select: none;
+  color: var(--adual-field-text-color);
 }
