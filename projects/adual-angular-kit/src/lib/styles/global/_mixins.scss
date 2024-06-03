@@ -24,17 +24,20 @@
   }
 }
 
-@mixin body-theme-colors($mode) {
+@mixin main-theme-colors($mode) {
   @if $mode==light {
     /*Global*/
     --global-background-color: #{$background-color};
+    --text-color: #{$text-color};
   }
 
   @else if $mode==dark {
     /*Global*/
     --global-background-color: #{$dark-background-color};
+    --text-color: #{$dark-text-color};
   }
 }
+
 
 @mixin all-theme-colors($mode) {
   @if $mode==light {
@@ -42,13 +45,13 @@
     @include field-theme-colors(light);
 
     /*Global*/
-    @include body-theme-colors(light);
+    @include main-theme-colors(light);
   }
 
   @else if $mode==dark {
     /* Adual Field */
     @include field-theme-colors(dark);
     /*Global*/
-    @include body-theme-colors(dark);
+    @include main-theme-colors(dark);
   }
 }
