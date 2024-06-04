@@ -20,29 +20,21 @@ export class FieldDirective implements OnInit, AfterContentInit {
 	constructor(
 		private readonly el: ElementRef,
 		private readonly render: Renderer2,
-		private readonly service: FieldService,
+		private readonly fieldService: FieldService,
 	) {
 		effect(() => {
 			// focus
-			if (this.service.isFocused()) {
+			if (this.fieldService.isFocused()) {
 				this.render.addClass(
 					this.el.nativeElement,
 					"adual-field--focused",
 				);
 			}
 			// blur
-			if (!this.service.isFocused()) {
+			if (!this.fieldService.isFocused()) {
 				this.render.removeClass(
 					this.el.nativeElement,
 					"adual-field--focused",
-				);
-			}
-
-			// content
-			if (this.service.haveContent()) {
-				this.render.addClass(
-					this.el.nativeElement,
-					"adual-field--content",
 				);
 			}
 		});
@@ -59,6 +51,17 @@ export class FieldDirective implements OnInit, AfterContentInit {
 	onMouseEnter(): void {
 		this.render.addClass(this.el.nativeElement, "adual-field--hover");
 	}
+
+  @HostListener("focusin")
+  onFocus(): void {
+    this.fieldService.focus();
+  }
+
+  // on blur
+  @HostListener("focusout")
+  onBlur(): void {
+    this.fieldService.blur();
+  }
 
 	@HostListener("mouseleave")
 	onMouseLeave(): void {

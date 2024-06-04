@@ -10,14 +10,12 @@
   &--outlined {
     border: 2px solid var(--adual-field-border-color);
     border-radius: var(--adual-field-border-radius);
-    padding: 0.5rem;
     background-color: var(--adual-field-background-color);
   }
 
   &--filled {
     background-color: var(--adual-field-background-color);
     border-radius: var(--adual-field-border-radius);
-    padding: 0.5rem;
   }
 }
 
@@ -26,21 +24,19 @@
   background-color: transparent !important;
   border: none;
   width: 100%;
+  padding: 0.5rem 1rem;
   color: var(--adual-field-text-color);
-  &.disabled {
-    display: none;
+  &--disabled {
+    opacity: 0;
   }
+
   &::placeholder {
     color: var(--adual-field-placeholder-color);
     opacity: 0.8;
   }
 
   &--focused {
-    display: block !important;
-  }
-
-  &--content {
-    display: block !important;
+    opacity: 1;
   }
 }
 
@@ -52,5 +48,6 @@
   border-radius: none !important;
   padding: 0 0.1rem;
   user-select: none;
+  margin: 0 1rem;
   color: var(--adual-field-text-color);
 }

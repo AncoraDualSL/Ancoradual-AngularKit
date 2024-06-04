@@ -6,9 +6,10 @@ import {
 	trigger,
 } from "@angular/animations";
 import { CommonModule } from "@angular/common";
-import { Component, effect, Input } from "@angular/core";
+import { AfterViewInit, Component, effect, ElementRef, Input, OnInit, ViewChild } from "@angular/core";
 
 import { FieldService } from "../services/field.service";
+import { LabelService } from "../services/label.service";
 
 @Component({
 	selector: "adual-label",
@@ -43,9 +44,10 @@ export class LabelComponent {
 	@Input() required: boolean = false;
 	isVisible: boolean = true;
 	moveUpState: "up" | "down" = "down";
-	constructor(private readonly formField: FieldService) {
+
+	constructor(private readonly formField: FieldService, private labelService: LabelService) {
 		effect(() => {
-			if (this.formField.isFocusedContent()) {
+			if (this.formField.isFocused()) {
 				this.isVisible = true;
 				this.moveUpState = "up";
 			} else {
@@ -54,4 +56,11 @@ export class LabelComponent {
 			}
 		});
 	}
+  ngAfterViewInit(): void {
+    if (this.srOnly) {
+      this.labelService.deactivate();
+      return
+    }
+    this.labelService.activate();
+  }
 }

@@ -3,7 +3,6 @@ import { Injectable, signal } from "@angular/core";
 @Injectable()
 export class FieldService {
 	isFocused = signal(false);
-	isFocusedContent = signal(false);
 	haveContent = signal(false);
 
 	toogleFocus(): void {
@@ -12,17 +11,10 @@ export class FieldService {
 
 	focus(): void {
 		this.isFocused.set(true);
-		this.isFocusedContent.set(true);
 	}
 
 	blur(): void {
 		this.isFocused.set(false);
-		if (!this.haveContent()) {
-			this.isFocusedContent.set(false);
-		}
-		if (this.haveContent()) {
-			this.isFocusedContent.set(true);
-		}
 	}
 
 	yetContent(): void {
