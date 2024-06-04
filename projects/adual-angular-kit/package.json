@@ -1,13 +1,13 @@
 {
   "name": "@adual/angular-kit",
   "description": "Ancoradual Angular Kit",
-  "version": "0.1.0",
+  "version": "0.1.0-alpha.0",
   "peerDependencies": {
-    "@angular/common": "^18.0.1",
-    "@angular/core": "^18.0.1"
+    "@angular/common": "^18.0.0",
+    "@angular/core": "^18.0.0"
   },
   "dependencies": {
-    "tslib": "^2.6.2"
+    "tslib": "^2.3.0"
   },
   "repository": {
     "type": "git",
