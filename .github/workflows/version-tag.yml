@@ -21,7 +21,7 @@ jobs:
     - name: Get version from package.json
       id: get_version
       run: |
-        VERSION=$(jq -r .version < package.json)
+        VERSION=$(jq -r .version < projects/adual-angular-kit/package.json)
         echo "::set-output name=VERSION::$VERSION"
 
     - name: Create GitHub Tag
