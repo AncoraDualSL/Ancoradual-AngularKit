@@ -10,6 +10,7 @@ import { AfterViewInit, Component, effect, ElementRef, Input, OnInit, ViewChild 
 
 import { FieldService } from "../services/field.service";
 import { LabelService } from "../services/label.service";
+import { InputService } from "../services/input.service";
 
 @Component({
 	selector: "adual-label",
@@ -45,14 +46,20 @@ export class LabelComponent {
 	isVisible: boolean = true;
 	moveUpState: "up" | "down" = "down";
 
-	constructor(private readonly formField: FieldService, private labelService: LabelService) {
+	constructor(
+    private readonly formField: FieldService,
+    private readonly labelService: LabelService,
+    private readonly inputService: InputService,
+  ) {
 		effect(() => {
 			if (this.formField.isFocused()) {
 				this.isVisible = true;
 				this.moveUpState = "up";
 			} else {
 				this.isVisible = false;
-				this.moveUpState = "down";
+        if (this.inputService.isInputEmpty()) {
+				  this.moveUpState = "down";
+        }
 			}
 		});
 	}

@@ -8,6 +8,7 @@ import {
 import { LabelComponent } from "../components/label.component";
 import { FieldService } from "../services/field.service";
 import { LabelService } from "../services/label.service";
+import { InputService } from "../services/input.service";
 
 @Component({
 	selector: "adual-field",
@@ -15,7 +16,7 @@ import { LabelService } from "../services/label.service";
 	templateUrl: "./field.component.html",
 	styleUrls: ["./field.component.scss"],
 	imports: [LabelComponent],
-	providers: [FieldService, LabelService],
+	providers: [FieldService, LabelService, InputService],
 })
 export class FieldComponent {
 }
