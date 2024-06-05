@@ -17,7 +17,11 @@
   "license": "MIT",
   "keywords": [
     "angular",
-    "components"
+    "components",
+    "component",
+    "kit",
+    "ancoradual",
+    "front-end"
   ],
   "sideEffects": false
 }
