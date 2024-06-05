@@ -21,7 +21,10 @@
     "component",
     "kit",
     "ancoradual",
-    "front-end"
+    "front-end",
+    "forms",
+    "signals",
+    "angular-18"
   ],
   "sideEffects": false
 }
