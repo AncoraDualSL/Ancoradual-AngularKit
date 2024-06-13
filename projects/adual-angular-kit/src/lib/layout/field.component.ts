@@ -5,7 +5,7 @@ import {
 	OnInit,
 } from "@angular/core";
 
-import { LabelComponent } from "../components/label.component";
+import { LabelComponent } from "../components/label/label.component";
 import { FieldService } from "../services/field.service";
 import { LabelService } from "../services/label.service";
 import { InputService } from "../services/input.service";

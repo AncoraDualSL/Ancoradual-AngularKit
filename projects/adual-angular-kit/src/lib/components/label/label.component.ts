@@ -8,9 +8,9 @@ import {
 import { CommonModule } from "@angular/common";
 import { AfterViewInit, Component, effect, ElementRef, Input, OnInit, ViewChild } from "@angular/core";
 
-import { FieldService } from "../services/field.service";
-import { LabelService } from "../services/label.service";
-import { InputService } from "../services/input.service";
+import { FieldService } from "../../services/field.service";
+import { LabelService } from "../../services/label.service";
+import { InputService } from "../../services/input.service";
 
 @Component({
 	selector: "adual-label",

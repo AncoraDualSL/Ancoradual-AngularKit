@@ -3,7 +3,7 @@
  */
 
 // Components
-export * from './lib/components/label.component';
+export * from './lib/components/label/label.component';
 
 // Layouts
 export * from './lib/layout/field.component';
