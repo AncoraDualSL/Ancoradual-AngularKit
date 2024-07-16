@@ -1,14 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
-@use '@adual/angular-kit/src/lib/styles/global' as angular-kit-global;
+// /* You can add global styles to this file, and also import other style files */
+// @use '@adual/angular-kit/src/lib/styles/global' as angular-kit-global;
 
 
-:root {
-  @include angular-kit-global.all-theme-colors(light);
-}
+// :root {
+//   @include angular-kit-global.all-theme-colors(light);
+// }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    @include angular-kit-global.all-theme-colors(dark);
-  }
-}
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     @include angular-kit-global.all-theme-colors(dark);
+//   }
+// }
 

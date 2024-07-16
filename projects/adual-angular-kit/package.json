@@ -1,10 +1,24 @@
 {
   "name": "@adual/angular-kit",
   "description": "Ancoradual Angular Kit",
-  "version": "0.1.1",
+  "version": "0.2.3",
   "peerDependencies": {
     "@angular/common": "^18.0.0",
     "@angular/core": "^18.0.0"
+  },
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    "./src/lib/styles/*": {
+      "default": "./src/lib/styles/styles.scss"
+    },
+    ".": {
+      "types": "./index.d.ts",
+      "esm2022": "./esm2022/adual-angular-kit.mjs",
+      "esm": "./esm2022/adual-angular-kit.mjs",
+      "default": "./fesm2022/adual-angular-kit.mjs"
+    }
   },
   "dependencies": {
     "tslib": "^2.3.0"

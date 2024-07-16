@@ -1,0 +1,15 @@
+@use './global/' as global;
+
+@use './atoms/' as atoms;
+
+:root {
+  @include global.all-theme-colors(light);
+}
+
+@media(prefers-color-scheme: dark) {
+  :root {
+    @include global.all-theme-colors(dark);
+    // @include my-theme-colors(dark);
+  }
+}
+

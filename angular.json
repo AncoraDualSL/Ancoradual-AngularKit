@@ -65,7 +65,8 @@
               }
             ],
             "styles": [
-              "projects/dev-app/src/styles.scss"
+              "projects/dev-app/src/styles.scss",
+              "@adual/angular-kit/src/lib/styles/styles.scss"
             ],
             "scripts": []
           },
